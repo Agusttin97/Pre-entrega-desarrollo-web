@@ -21,7 +21,7 @@ header {
 }
 
 .logo-img {
-    width: 800px;
+    max-width: 100%;
 }
 
 .navbar {
@@ -110,7 +110,7 @@ a.active,
 }
 
 .redes {
-    display: inline-block;
+    display: flex;
     margin: 15px;
 }
 
@@ -138,6 +138,19 @@ a.active,
 
 .card-title {
     font-weight: bold;
+}
+
+@media (max-width: 1552px) {
+
+    .principal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
 }
 
 
