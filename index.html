@@ -6,43 +6,39 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 <body>
     <!--Header-->
-    <header>
-            <a href="#" class="logo">
-                <img src="./img/banner-simpsons.jpg" alt="logo" class="logo-img">
-            </a>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="./img/banner-simpsons.jpg" alt="logo" class="logo-img">
+        </a>
         <nav class="navbar">
-            <ul class="nav-item">
-                <li><a href="./index.html" class="active">HOME</a></li>
-                <li><a href="./pages/personajes.html">PERSONAJES</a></li>
-                <li><a href="./pages/galeria.html">GALERIA</a></li>
-                <li><a href="./pages/tienda.html">TIENDA</a></li>
-                <li><a href="./pages/contacto.html">CONTACTO</a></li>
-            </ul>            
+            <a href="./index.html" class="active nav-item">HOME</a>
+            <a href="./pages/personajes.html" class="nav-item">PERSONAJES</a>
+            <a href="./pages/galeria.html" class="nav-item">GALERIA</a>
+            <a href="./pages/tienda.html" class="nav-item">TIENDA</a>          
+            <a href="./pages/contacto.html" class="nav-item">CONTACTO</a>
         </nav>
     </header>
     <!--Main-->
     <main>
         <section class="home">
-            <div class="info">
+            <div class="home-info">
                 <p class="info-p">      
                     ¡La temporada 35 de The Simpsons ya está disponible! Disfruta de tus personajes favoritos en Fox.<br>
                 </p>
             </div>
             <div class="trailer-box">
-                <iframe class="trailer" width="1000" height="500" src="https://www.youtube.com/embed/3R1ebDCv7vM?si=B2z15Pqdx_ZHuhD3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="trailer" src="https://www.youtube.com/embed/3R1ebDCv7vM?si=B2z15Pqdx_ZHuhD3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-
         </section>
         <section class="about">
-            <div class="about-box">
-                <h2>Sobre el Show</h2>
+                <h2 class="about-title">Sobre el Show</h2>
                 <span class="separador">|</span>
-                <p>
+                <p class="about-p">
                     La querida serie animada se centra en la familia del mismo nombre en la ciudad de Springfield en un estado anónimo de EE. UU. El jefe de la familia Simpson, Homero, no es el típico hombre de familia. Empleado de una planta nuclear, hace todo lo posible para liderar a su familia, pero a menudo descubre que ellos lo están liderando a él. La familia incluye a la amorosa matriarca de cabello azul Marge, el problemático hijo Bart, la exitosa hija Lisa y la bebé Maggie. Otros residentes de Springfield incluyen al vecino religioso de la familia, Ned Flanders, el médico de familia Dr. Hibbert, Moe el barman y el jefe de policía Clancy Wiggum.
                 </p>
                 <span class="separador">|</span>
@@ -51,16 +47,32 @@
                     <a href="https://www.instagram.com/thesimpsons/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
                     <a href="https://twitter.com/TheSimpsons" target="_blank" class="social-icon"><i class="bi bi-twitter-x"></i></a>
                 </div>
-            </div>
-
         </section>
     </main>
     <!--Footer-->
-    <footer>
-    <p>The Simpsons &copy; Copyright</p>
-    <hr>
-    <p>Agustin Peralta - Coderhouse</p>
-    </footer>
+    <footer class="footer">
+        <div class="nav-footer">
+            <ul class="nav-list-footer">
+                <li class="nav-item-footer"><a href="#">Home</a></li>
+                <li class="nav-item-footer"><a href="#">Personajes</a></li>
+                <li class="nav-item-footer"><a href="#">Galeria</a></li>
+                <li class="nav-item-footer"><a href="#">Tienda</a></li>
+                <li class="nav-item-footer"><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>The Simpsons &copy; Copyright</p>
+            <hr>
+            <p>Agustin Peralta - Coderhouse</p>
+        </div>
+        <div class="redes-footer">
+            <ul class="redes-ul">
+                <li><a href="https://www.facebook.com/TheSimpsons" target="_blank" class="social-icon"><i class="bi bi-facebook"> Facebook</i></a></li>
+                <li><a href="https://www.instagram.com/thesimpsons/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i> Instagram</a></li>
+                <li><a href="https://twitter.com/TheSimpsons" target="_blank" class="social-icon"><i class="bi bi-twitter-x"></i> X/Twitter</a></li>
+            </ul>
+            </div>
+        </footer>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
