@@ -1,9 +1,11 @@
 .footer {
-    background-color: #37bcd3;
+    background-color: $fondoFooter;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.1rem;
+    border-top: 3px solid black ;
+    font-family: sans-serif;
 
     .nav-footer{
         margin-right: 7rem;
