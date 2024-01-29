@@ -1,3 +1,35 @@
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+
 .contacto {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 80vh;
@@ -18,7 +50,7 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         border-radius: 20px;
         text-align: center;
-        width: 340px;
+        width: 700px;
 
         @media (max-width: 990px) {
             padding: 50px 30px;
@@ -87,11 +119,11 @@
         box-shadow: 0 0 10px;
         display: flex;
 
-        @media (max-width: 1342px) {
+        @media (max-width: 1702px) {
             width: 550px;
             height: 600px;
         }
-        @media (max-width: 576px) {
+        @media (max-width: 1332px) {
             width: 300px;
             height: 450px;
         }

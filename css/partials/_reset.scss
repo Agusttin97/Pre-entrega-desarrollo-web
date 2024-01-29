@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "simpsonsfont";
+    src: url(../../fonts/Simpsonfont.ttf);
+}
+
+body {
+    background-color: $fondoBody;
+}
+
 // body {
 //     min-height: 100vh;
 //     display: flex;

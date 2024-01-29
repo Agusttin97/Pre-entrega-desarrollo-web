@@ -87,7 +87,8 @@
     min-height: 30vh;
 
     @media (max-width:700px) {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         text-align: center;  
     }
 
@@ -118,6 +119,7 @@
         margin-right: 2rem;
         text-align: center;
         justify-content: center;
+        font-size: 1.2rem;
         
     }
 
@@ -128,6 +130,7 @@
         .social-icon {
             color: black;
             font-size: 1.5rem;
+            margin-inline: 1rem;
 
             &:hover {
                 color: yellow;

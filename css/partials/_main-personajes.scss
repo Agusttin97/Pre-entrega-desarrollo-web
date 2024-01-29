@@ -1,9 +1,22 @@
 .personajes {
     background-color: $fondoBody;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    .title {
+        font-family: simpsonsfont;
+        color: rgb(218, 218, 39);
+        font-size: 4rem;
+        margin-top: 2rem;
+        
+    }
 
 
     .card {
         display: flex;
+        max-width: 1800px;
         padding: 3rem;
     
         @media (max-width: 768px) {

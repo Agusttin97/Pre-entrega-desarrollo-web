@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "simpsonsfont";
+  src: url(../../fonts/Simpsonfont.ttf);
+}
+body {
+  background-color: #4fc8f8;
+}
+
 .header {
   background-color: rgb(11, 185, 254);
   padding-bottom: 0.5rem;
@@ -165,7 +173,8 @@
 }
 @media (max-width: 700px) {
   .about {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
 }
@@ -196,6 +205,7 @@
   margin-right: 2rem;
   text-align: center;
   justify-content: center;
+  font-size: 1.2rem;
 }
 .about .redes {
   display: flex;
@@ -204,6 +214,7 @@
 .about .redes .social-icon {
   color: black;
   font-size: 1.5rem;
+  margin-inline: 1rem;
 }
 .about .redes .social-icon:hover {
   color: yellow;
@@ -298,9 +309,20 @@
 
 .personajes {
   background-color: #4fc8f8;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.personajes .title {
+  font-family: simpsonsfont;
+  color: rgb(218, 218, 39);
+  font-size: 4rem;
+  margin-top: 2rem;
 }
 .personajes .card {
   display: flex;
+  max-width: 1800px;
   padding: 3rem;
 }
 @media (max-width: 768px) {
@@ -382,6 +404,29 @@
 }
 .personajes .card .img-box .card-img:hover {
   transform: scale(1.1);
+}
+
+.fade-in-fwd {
+  animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+.title {
+  font-family: simpsonsfont;
+  color: rgb(218, 218, 39);
+  font-size: 4rem;
+  justify-content: center;
+  margin-top: 2rem;
+  display: flex;
+  flex: 1;
 }
 
 .galeria {
@@ -499,6 +544,22 @@
   background-color: #333;
 }
 
+.tracking-in-contract {
+  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
 .contacto {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 80vh;
@@ -520,7 +581,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   text-align: center;
-  width: 340px;
+  width: 700px;
 }
 @media (max-width: 990px) {
   .contacto form {
@@ -580,13 +641,13 @@
   box-shadow: 0 0 10px;
   display: flex;
 }
-@media (max-width: 1342px) {
+@media (max-width: 1702px) {
   .contacto .map {
     width: 550px;
     height: 600px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 1332px) {
   .contacto .map {
     width: 300px;
     height: 450px;
