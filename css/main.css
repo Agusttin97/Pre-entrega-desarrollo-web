@@ -4,24 +4,14 @@
   box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-body main {
-  flex: 1;
-  background-color: #4fc8f8;
-}
-
 .header {
   background-color: rgb(11, 185, 254);
   padding-bottom: 0.5rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   border-bottom: 3px solid #000000;
   font-family: sans-serif;
-  overflow: hidden;
 }
 .header .logo .logo-img {
   max-width: 100%;
@@ -32,6 +22,7 @@ body main {
   margin-top: 0.5rem;
 }
 .header .navbar .nav-item {
+  display: flex;
   position: relative;
   margin-left: 3rem;
   text-decoration: none;
@@ -107,6 +98,7 @@ body main {
   align-items: center;
   justify-content: space-around;
   border-bottom: 3px solid black;
+  min-height: 50vh;
 }
 @media (max-width: 1100px) {
   .home {
@@ -168,10 +160,12 @@ body main {
   display: grid;
   grid-template-columns: 1fr 0.2fr 3fr 0.2fr 1fr;
   align-items: center;
+  max-height: 100%;
+  min-height: 30vh;
 }
 @media (max-width: 700px) {
   .about {
-    display: block;
+    display: inline-block;
     text-align: center;
   }
 }
@@ -242,7 +236,6 @@ body main {
   padding: 0.1rem;
   border-top: 3px solid black;
   font-family: sans-serif;
-  overflow: hidden;
   margin-top: auto;
 }
 .footer .nav-footer {
@@ -304,93 +297,87 @@ body main {
 }
 
 .personajes {
-  padding: 2rem;
-  display: flex;
   background-color: #4fc8f8;
-  flex-direction: column;
 }
 .personajes .card {
-  background-color: #4fc8f8;
   display: flex;
-  margin: auto;
-  margin-top: 3rem;
-  width: 1500px;
-  max-width: 100%;
-  max-height: 600px;
-  border-radius: 20px;
+  padding: 3rem;
 }
-@media (max-width: 840px) {
+@media (max-width: 768px) {
   .personajes .card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    max-height: 600px;
-    margin-top: 0;
-    margin-bottom: 2rem;
-  }
-}
-@media (max-width: 580px) {
-  .personajes .card {
-    margin-bottom: 5rem;
-    justify-content: center;
   }
 }
 .personajes .card .card-info {
-  background-color: #2cade0;
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
   text-align: center;
-  width: 1500px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding: 3rem;
+  justify-content: center;
+  margin-block: 3rem;
+  background-color: #2cade0;
+  border-end-start-radius: 20px;
+  border-start-start-radius: 20px;
+  max-height: 300px;
+  width: 100%;
   font-family: sans-serif;
+  gap: 2rem;
+  margin: auto;
 }
-@media (max-width: 840px) {
+@media (max-width: 768px) {
   .personajes .card .card-info {
-    padding: 1rem;
-    margin-bottom: 0;
+    margin: 0;
+    border-radius: 20px;
+    gap: 1rem;
   }
 }
-.personajes .card .card-info .card-p {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+@media (max-width: 486px) {
+  .personajes .card .card-info {
+    max-height: 400px;
+  }
 }
 .personajes .card .card-info a {
+  text-decoration: none;
   font-weight: bold;
   font-size: 0.8rem;
-  margin-top: 1rem;
-  text-decoration: none;
   color: black;
   padding: 0.5rem;
   border-radius: 10px;
   box-shadow: 0 0 10px;
+  width: 100px;
+  margin: auto;
 }
 .personajes .card .card-info a:hover {
   background-color: yellow;
 }
 .personajes .card .img-box {
   display: flex;
-  justify-content: center;
-  width: 350px;
-  height: 350px;
-  max-width: 100%;
-  box-shadow: 0 0 10px;
+  width: 280px;
+  height: 400px;
   border-radius: 20px;
+  box-shadow: 0 0 5px;
+  overflow: hidden;
 }
-@media (max-width: 840px) {
+@media (max-width: 768px) {
   .personajes .card .img-box {
-    box-shadow: none;
-    border: 1px solid;
-    border-top: 0;
     border-radius: 0;
-    box-shadow: 0 0 20px;
+    border-start-start-radius: 20px;
+    border-start-end-radius: 20px;
+  }
+}
+@media (max-width: 486px) {
+  .personajes .card .img-box {
+    width: 250px;
+    height: 350px;
   }
 }
 .personajes .card .img-box .card-img {
-  max-width: 100%;
-  height: 300px;
+  width: 100%;
   max-height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
 .personajes .card .img-box .card-img:hover {
@@ -402,6 +389,7 @@ body main {
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 16px;
   padding: 2rem;
+  background-color: #4fc8f8;
 }
 @media (max-width: 570px) {
   .galeria {
@@ -429,135 +417,105 @@ body main {
 
 .shop {
   background-color: #4fc8f8;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-around;
   font-family: sans-serif;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1424px) {
   .shop {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 728px) {
   .shop {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
-.shop .card {
+.shop .shop-card {
+  width: 400px;
+  height: 600px;
+  margin: 20px auto;
   background-color: #2cade0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 350px;
-  height: 550px;
-  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
-@media (max-width: 1488px) {
-  .shop .card {
-    width: 300px;
-  }
-}
-@media (max-width: 1280px) {
-  .shop .card {
-    width: 250px;
-    height: 500px;
-  }
-}
-@media (max-width: 1080px) {
-  .shop .card {
-    margin-bottom: 1.5rem;
+@media (max-width: 1630px) {
+  .shop .shop-card {
     width: 350px;
     height: 550px;
   }
 }
-@media (max-width: 778px) {
-  .shop .card {
-    width: 300px;
-  }
-}
-@media (max-width: 680px) {
-  .shop .card {
-    width: 250px;
-    height: 500px;
-  }
-}
-@media (max-width: 575px) {
-  .shop .card {
-    width: 300px;
-    height: 550px;
-  }
-}
-.shop .card .card-img-box {
+.shop .shop-card img {
   width: 100%;
-  margin: 2rem;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  height: 400px;
 }
-.shop .card .card-img-box:hover {
-  transform: scale(1.1);
+@media (max-width: 1630px) {
+  .shop .shop-card img {
+    height: 350px;
+  }
 }
-.shop .card .card-img-box .card-img {
-  max-width: 100%;
-  flex: 1;
-  padding: 1rem;
-  border-radius: 10px;
+.shop .shop-card .shop-card-content {
+  padding: 20px;
 }
-.shop .card .card-info {
-  background-color: rgb(11, 185, 254);
-  width: 100%;
-  max-height: 250px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  padding: 1rem;
+.shop .shop-card .shop-card-content .shop-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
-.shop .card .card-info .card-title {
-  align-self: center;
+.shop .shop-card .shop-card-content .shop-card-description {
+  color: #000000;
+  margin-bottom: 15px;
 }
-.shop .card .card-info .card-p {
-  margin-top: 1rem;
-}
-.shop .card .card-info span {
-  margin-top: 1rem;
+.shop .shop-card .shop-card-content .shop-card-price {
+  font-size: 1.2rem;
   font-weight: bold;
-  align-self: end;
+  color: #000000;
+  margin-bottom: 15px;
 }
-.shop .card .card-info .card-btn {
+.shop .shop-card .shop-card-content .shop-card-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
 }
-.shop .card .card-info .card-btn a {
-  background-color: #2cade0;
+.shop .shop-card .shop-card-content .shop-card-buttons .buy-button,
+.shop .shop-card .shop-card-content .shop-card-buttons .cart-button {
+  padding: 10px 15px;
+  border: none;
   border-radius: 5px;
-  box-shadow: 0 3px 3px;
-  padding: 2px;
-  text-decoration: none;
-  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  transition: background-color 0.3s;
 }
-.shop .card .card-info .card-btn a:hover {
-  transform: scale(1.1);
+.shop .shop-card .shop-card-content .shop-card-buttons .buy-button:hover,
+.shop .shop-card .shop-card-content .shop-card-buttons .cart-button:hover {
+  background-color: rgb(11, 185, 254);
+}
+.shop .shop-card .shop-card-content .shop-card-buttons .buy-button {
+  background-color: #333;
+}
+.shop .shop-card .shop-card-content .shop-card-buttons .cart-button {
+  background-color: #333;
 }
 
 .contacto {
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  background-color: #4fc8f8;
+  padding: 2rem;
 }
 @media (max-width: 990px) {
   .contacto {
     padding: 30px;
+    flex-direction: column;
   }
 }
 .contacto form {
+  background-color: #2cade0;
   padding: 50px 55px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -568,6 +526,7 @@ body main {
   .contacto form {
     padding: 50px 30px;
     width: 100%;
+    margin-bottom: 2rem;
   }
 }
 .contacto form .contacto-title {
@@ -587,8 +546,8 @@ body main {
   padding: 17px 25px;
   border-radius: 25px;
   margin-bottom: 20px;
-  background-color: rgba(96, 190, 228, 0.432);
-  border: 2px solid white;
+  background-color: rgb(11, 185, 254);
+  border: 2px solid #2cade0;
   outline: none;
 }
 @media (max-width: 990px) {
@@ -603,22 +562,33 @@ body main {
   text-align: center;
 }
 .contacto form .contacto-input .contacto-txt a {
-  color: rgb(77, 194, 240);
+  color: rgb(0, 0, 0);
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
 }
 .contacto form .contacto-input .contacto-btn {
   font-size: 16px;
-  color: white;
+  color: rgb(0, 0, 0);
   border: 0;
   border-radius: 25px;
-  background-color: rgb(77, 194, 240);
+  background-color: rgb(11, 185, 254);
   cursor: pointer;
 }
-
-@media (max-width: 990px) {
-  .contacto {
-    padding: 30px;
+.contacto .map {
+  border-radius: 20px;
+  box-shadow: 0 0 10px;
+  display: flex;
+}
+@media (max-width: 1342px) {
+  .contacto .map {
+    width: 550px;
+    height: 600px;
+  }
+}
+@media (max-width: 576px) {
+  .contacto .map {
+    width: 300px;
+    height: 450px;
   }
 }/*# sourceMappingURL=main.css.map */
